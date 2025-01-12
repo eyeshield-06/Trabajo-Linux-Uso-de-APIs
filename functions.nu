@@ -1,5 +1,4 @@
 export def loc-from-address [address:string] {
-  let mapsAPIkey = "AIzaSyBEZtnneznOl34ZIfmQwoJpWZ7n3v8pDr0"
   let url = {
     scheme: "https"
     host: "maps.google.com"
@@ -18,7 +17,6 @@ export def maps-api [
   transport:string = "driving"
   --no:string = ""
 ] {
-  let mapsAPIkey = "AIzaSyBEZtnneznOl34ZIfmQwoJpWZ7n3v8pDr0"
   let xi_card = loc-from-address $xi
   let xf_card = loc-from-address $xf
   let url = {
@@ -43,7 +41,6 @@ export def gemini-api [
   --temp:float = 1.0
   --personality:string = "Eres un bebe que solo balbucea"
 ] {
-  let GeminiAPIkey = "AIzaSyAoseUi0eCZ09R98t_mF-zBvakgXtMbYoc"
   let url = {
     scheme: "https"
     host: "generativelanguage.googleapis.com"
@@ -84,7 +81,6 @@ export def tomorrow-api [
   x:string
   by:string = "now"
 ] {
-  let TomorrowAPIkey = "1N0HLnoSNu6iPgMYM2A4YAOrtJb5hZH1"
   let x_coord = loc-from-address $x
   if $by == "now" {
     let url = {
